@@ -1,7 +1,7 @@
 # A-Virtual-Fencing-Framework-for-Safe-and-Efficient-Collaborative-Robotics
 
 Paper submitted to the IEEE International Conference on Automation Science and Engineering (CASE) 2025 - [More Info Here](https://2025.ieeecase.org). <br />
-Please go through the [project paper]() on understanding on our work.
+Please go through the [project paper](https://github.com/AvinX12/A-Virtual-Fencing-Framework-for-Safe-and-Efficient-Collaborative-Robotics/blob/main/documents/IEEE_Paper_Submitted_To_CASE2025.pdf) on understanding on our work.
 
 ## Abstract
 
@@ -13,7 +13,7 @@ Collaborative robots (cobots) increasingly operate alongside humans, demanding r
 3. Arducam IMX447 Camera - [official site](https://www.arducam.com/product/b0242-arducam-imx477-hq-camera/)
 4. Arducam IMX477 UVC Camera Adapter Board - [official site](https://www.arducam.com/product/arducam-uvc-camera-adapter-board-for-12mp-imx477-raspberry-pi-hq-camera/)
 
-![Experimental setup featuring a UR16e cobot, integrated with an Arducam IMX477 camera and an embedded AI computational unit.]()
+<img src="https://github.com/AvinX12/A-Virtual-Fencing-Framework-for-Safe-and-Efficient-Collaborative-Robotics/blob/main/documents/media/real-setup.png" width="400" height="300">
 
 ## Software Setup Installation Instructions
 1. Nvidia JetPack SDK 6.0 (Ubuntu 22.04 LTS) - [instructions](https://developer.nvidia.com/embedded/jetpack-sdk-60)
@@ -47,12 +47,13 @@ dpkg -l | grep nvidia-tensorrt
 # This requirements.txt file is available at ./installation/
 pip install -r requirements.txt
 ```
-For more info on installation process, please refer to step-by step instructions from [installation guide]().
+For more info on installation process, please refer to step-by step instructions from [installation guide]() - WORK IN PROGRESS!. <br /> <br />
+![Build Success](https://img.shields.io/badge/build-success-brightgreen.svg)
 
 ## Experimentation
 The robot operates at normal speed when no person is detected (top left in the figure below). However, when a person is detected (highlighted in yellow) in the increased attention zone (top right), it slows down. When a person is detected (highlighted in red) in the critical zone (bottom right), the robot stops. Once the person moves back to the increased attention zone (bottom left), the robot resumes slow movement. Once the area is clear, it returns to normal speed.
 
-![Experimental Zones]()
+<img src="https://github.com/AvinX12/A-Virtual-Fencing-Framework-for-Safe-and-Efficient-Collaborative-Robotics/blob/main/documents/media/zone-scenarios.png" width="400" height="300">
 
 ## Results
 In the absence of human detection, the robot completes six cycles in 60 seconds, which is considered as the operational efficiency of 100%. The latency of the system is the time taken by the ambient sensor to detect humans in designated zones, process the feed by the detection & SQP algorithms, issue the corresponding safeguarding command to the robot and execute that command. The collision avoidance rate quantifies the effectiveness of the system in safeguarding collisions between humans and robots.
@@ -66,7 +67,9 @@ The table below compares **Operational Efficiency (OE)**, **System Latency (SL)*
 
 The figure below shows effectiveness of velocity smoothening with and without SQP-based optimization. Zone-based detection is employed in both cases.
 
-![Graph]()
+<img src="https://github.com/AvinX12/A-Virtual-Fencing-Framework-for-Safe-and-Efficient-Collaborative-Robotics/blob/main/documents/media/exp-2-results.png" width="400" height="250">
+
+The video demonstration of our proposed zone-based SQP-optimization-enabled framework is available here: [YouTube]()
 
 ## Conclusion
 In conclusion, this paper presented a modular safeguarding mechanism designed to enhance collaborative robotic operations in dynamic industrial environments. The proposed approach integrates a real-time human detection and prediction module with a UR16e workstation, allowing a flexible fencing framework. By formulating the safety–performance tradeoff as an optimization problem and solving it with SQP, a zone-based switching control strategy is achieved. Experimental results confirm that the virtual fencing method is cost-effective, exhibits low latency, and can be readily adapted to diverse industrial applications. Furthermore, minimized halts and smooth speed reductions were demonstrated, underscoring their critical role in maintaining operational efficiency.
