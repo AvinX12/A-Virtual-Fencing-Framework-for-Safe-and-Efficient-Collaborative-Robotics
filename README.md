@@ -47,8 +47,10 @@ dpkg -l | grep nvidia-tensorrt
 # This requirements.txt file is available at ./installation/
 pip install -r requirements.txt
 ```
-For more info on installation process, please refer to step-by step instructions from [installation guide]() - WORK IN PROGRESS!. <br /> <br />
-![Build Success](https://img.shields.io/badge/build-success-brightgreen.svg)
+![Status: Success](https://img.shields.io/badge/status-Success-brightgreen?style=flat-square) <br /> <br />
+
+For more info on installation process, please refer to step-by step instructions from [installation guide](). <br />
+![Work in Progress](https://img.shields.io/badge/status-Work%20in%20Progress-orange?style=flat-square)
 
 ## Experimentation
 The robot operates at normal speed when no person is detected (top left in the figure below). However, when a person is detected (highlighted in yellow) in the increased attention zone (top right), it slows down. When a person is detected (highlighted in red) in the critical zone (bottom right), the robot stops. Once the person moves back to the increased attention zone (bottom left), the robot resumes slow movement. Once the area is clear, it returns to normal speed.
@@ -70,6 +72,7 @@ The figure below shows effectiveness of velocity smoothening with and without SQ
 <img src="https://github.com/AvinX12/A-Virtual-Fencing-Framework-for-Safe-and-Efficient-Collaborative-Robotics/blob/main/documents/media/exp-2-results.png" width="400" height="250">
 
 The video demonstration of our proposed zone-based SQP-optimization-enabled framework is available here: [YouTube]()
+![Work in Progress](https://img.shields.io/badge/status-Work%20in%20Progress-orange?style=flat-square)
 
 ## Conclusion
 In conclusion, this paper presented a modular safeguarding mechanism designed to enhance collaborative robotic operations in dynamic industrial environments. The proposed approach integrates a real-time human detection and prediction module with a UR16e workstation, allowing a flexible fencing framework. By formulating the safety–performance tradeoff as an optimization problem and solving it with SQP, a zone-based switching control strategy is achieved. Experimental results confirm that the virtual fencing method is cost-effective, exhibits low latency, and can be readily adapted to diverse industrial applications. Furthermore, minimized halts and smooth speed reductions were demonstrated, underscoring their critical role in maintaining operational efficiency.
@@ -80,4 +83,4 @@ The authors sincerely thank Prof. Katsuo Kurabayashi and Ray Li for their invalu
 ## Authors
 **Vineela Reddy Pippera Badguna** (vp2504@nyu.edu) - Mechanical and Aerospace Engineering Department, New York University, 5 MetroTech Center, Brooklyn, NY 11201, USA <br /> <br />
 **Aliasghar Arab** - Mechanical and Aerospace Engineering Department, New York University, 5 MetroTech Center, Brooklyn, NY 11201, USA <br /> <br />
-**Durga Avinash Kodavalla** (durga.avinash.k@nyu.edu) - Electrical & Computer Engineering Department, New York University, 5 MetroTech Center, Brooklyn, NY 11201, USA
+**Durga Avinash Kodavalla** (durga.avinash.k@nyu.edu) - Electrical and Computer Engineering Department, New York University, 5 MetroTech Center, Brooklyn, NY 11201, USA
